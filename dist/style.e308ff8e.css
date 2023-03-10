@@ -1,0 +1,504 @@
+/* UTILITIES */
+
+
+
+* {
+
+  margin: 0px;
+
+  padding: 0px;
+
+  box-sizing: border-box;
+
+  font-size: 100%;
+
+
+}
+
+body {
+
+  font-family: 'Inconsolata', monospace;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+li {
+
+  list-style: none;
+  color: black;
+
+}
+
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+
+  display: flex;
+
+  position: fixed;
+
+  width: 100%;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 50px;
+
+  background-color: transparent;
+
+  color: #fff;
+
+}
+
+.nav-links a {
+
+  color: white;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+/* LOGO */
+
+.logo {
+  margin-bottom: 22px;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+.logo em {
+  font-style: normal;
+  color: #f7c552;
+  font-size: 3rem;
+}
+
+/* NAVBAR MENU */
+
+.menu {
+
+  display: flex;
+
+  gap: 1em;
+
+  font-size: 18px;
+
+}
+
+.menu li:hover {
+
+  background-color: black;
+
+  border-radius: 5px;
+
+  transition: 0.3s ease;
+
+}
+
+.menu li {
+
+  padding: 5px 14px;
+
+}
+
+
+
+/* DROPDOWN MENU SI BESOIN ??? */
+
+.services {
+
+  position: relative;
+
+}
+
+.dropdown {
+
+  background-color: white;
+
+  padding: 1em 0;
+
+  position: absolute;
+
+  /*BELEK AU PARENT*/
+
+  display: none;
+
+  border-radius: 8px;
+
+  top: 35px;
+
+}
+
+.dropdown li+li {
+
+  margin-top: 10px;
+
+}
+
+.dropdown li {
+
+  padding: 0.5em 1em;
+
+  width: 8em;
+
+  text-align: center;
+
+}
+
+.dropdown li:hover {
+
+  background-color: white;
+
+}
+
+.services:hover .dropdown {
+
+  display: block;
+
+}
+
+/*RESPONSIVE NAVBAR MENU DEBUT*/
+
+/* CHECKBOX CACHEE */
+
+input[type=checkbox] {
+
+  display: none;
+
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+
+  display: none;
+
+  margin-bottom: 22px;
+
+  padding: 3px 10px 3px 10px;
+
+  border-radius: 10%;
+
+  border-color: #f7c552;
+
+  background-color: #f7c552;
+
+  color: white;
+
+  font-size: 30px;
+
+  user-select: none;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+
+  .menu {
+
+    display: none;
+
+    position: absolute;
+
+    background-color: white;
+
+    opacity: 80%;
+
+    right: 0;
+
+    left: 0;
+
+    text-align: center;
+
+    padding: 16px 0;
+
+  }
+
+  .menu li:hover {
+
+    display: inline-block;
+
+    background-color: #f7c552;
+
+    transition: 0.3s ease;
+
+  }
+
+  .nav-links a {
+
+    color: black;
+    font-family: 'Inconsolata', monospace;
+
+  }
+
+  .menu li+li {
+
+    margin-top: 12px;
+
+  }
+
+  input[type=checkbox]:checked~.menu {
+
+    display: block;
+
+  }
+
+  .hamburger {
+
+    display: block;
+
+  }
+
+  .dropdown {
+
+    left: 50%;
+
+    top: 30px;
+
+    transform: translateX(35%);
+
+  }
+
+  .dropdown li:hover {
+
+    background-color: black;
+
+  }
+
+}
+
+/* IMAGE SOUS LA NAVBAR */
+
+.banner_main {
+  padding-bottom: 300px;
+  background: url(/banner_bg.01c5f65e.jpg);
+  background-size: cover;
+  background-position: bottom;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.banner_main h1 {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.m1 {
+  color: #f7c552;
+  margin-right: 10px;
+}
+
+.m2 {
+  color: aqua;
+  margin-right: 10px;
+}
+
+.banner_main p {
+  font-size: 0.8rem;
+  font-family: 'Inconsolata', monospace;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+.h2 {
+  padding: 5px 5px 5px 5px;
+  padding: 4rem;
+}
+
+button {
+  background-color: white;
+  border-radius: 1.5em;
+  display: block;
+  position: relative;
+  width: 8em;
+  height: 3em;
+}
+
+/* RESPONSIVE AJUSTEMENT TITRE  */
+
+@media (max-width: 550px) {
+
+  .banner_main h1 {
+    display: flex;
+    padding: 2rem;
+    text-align: center;
+  }
+
+}
+
+/* ABOUT SECTION + RESPONSIVE */
+
+.about_us {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(/banner_bg.01c5f65e.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.icon {
+  width: 110px;
+  height: 110px;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+}
+
+.circles_yellow {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .circles_yellow {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+  }
+
+}
+
+
+
+
+.blue_square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #33c1cf;
+  width: 100%;
+}
+
+.title_blue {
+  display: flex;
+  padding-top: 50px;
+}
+
+.text_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p_blue {
+  display: flex;
+  padding-top: 50px;
+}
+
+.icon {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+}
+
+
+
+.icon1 {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+  background-image: url(/service_icon_01.13f0d52d.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon2 {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+  background-image: url(/service_icon_02.664869cd.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon3 {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+  background-image: url(/service_icon_03.7890d162.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon4 {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 104px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #f7c552;
+  background-image: url(/service_icon_04.6f276cc3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ul_gallery {
+  display: flex;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
